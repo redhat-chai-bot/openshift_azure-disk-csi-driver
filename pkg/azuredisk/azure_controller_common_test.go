@@ -247,8 +247,8 @@ func TestCommonDetachDisk(t *testing.T) {
 	for i, test := range testCases {
 		testCloud := provider.GetTestCloud(ctrl)
 		common := &controllerCommon{
-			cloud:                              testCloud,
-			lockMap:                            newLockMap(),
+			cloud:              testCloud,
+			lockMap:            newLockMap(),
 			ForceDetachBackoff: true,
 			clientFactory:      testCloud.ComputeClientFactory,
 		}
